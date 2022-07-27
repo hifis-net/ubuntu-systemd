@@ -30,5 +30,5 @@ and are automatically rebuilt once a week.
 
 ## Authors
 
-This project is maintained by [HIFIS])(https://www.hifis.net).
+This project is maintained by [HIFIS](https://www.hifis.net).
 It is built upon https://github.com/geerlingguy/docker-ubuntu2204-ansible.
