@@ -1,7 +1,7 @@
 ARG VERSION=24.04
 
 FROM ubuntu:${VERSION}
-LABEL maintainer="Tobias Huste"
+LABEL maintainer="HIFIS (https://www.hifis.net)"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -32,5 +32,16 @@ RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin
 # multiple containers with Molecule (https://github.com/ansible/molecule/issues/1104)
 RUN rm -f /lib/systemd/system/systemd*udev* \
   && rm -f /lib/systemd/system/getty.target
+
+# Create ansible user with sudo permissions
+ENV ANSIBLE_USER=ansible \
+    SUDO_GROUP=sudo
+
+# Create non-root user with sudo access
+RUN set -xe \
+    && groupadd -r ${ANSIBLE_USER} \
+    && useradd -m -g ${ANSIBLE_USER} ${ANSIBLE_USER} \
+    && usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} \
+    && sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
 
 CMD ["/lib/systemd/systemd"]
