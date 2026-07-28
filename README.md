@@ -15,6 +15,7 @@ GitHub Package Registry.
 These tags are available. They are updated on changes to the `main` branch
 and are automatically rebuilt once a week.
 
+* `ghcr.io/hifis-net/ubuntu-systemd:26.04`
 * `ghcr.io/hifis-net/ubuntu-systemd:24.04`
 * `ghcr.io/hifis-net/ubuntu-systemd:22.04`
 * `ghcr.io/hifis-net/ubuntu-systemd:20.04`

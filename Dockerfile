@@ -1,4 +1,4 @@
-ARG VERSION=24.04
+ARG VERSION=26.04
 
 FROM ubuntu:${VERSION}
 LABEL maintainer="HIFIS (https://www.hifis.net)"
