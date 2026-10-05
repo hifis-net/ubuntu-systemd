@@ -27,7 +27,7 @@ and are automatically rebuilt once a week.
 * Run the container via Podman:
 
   ```bash
-  podman run -it --systemd=true --privileged ghcr.io/hifis-net/ubuntu-systemd:22.04
+  podman run -it --systemd=true --privileged ghcr.io/hifis-net/ubuntu-systemd:26.04
   ```
 
 ## Authors
