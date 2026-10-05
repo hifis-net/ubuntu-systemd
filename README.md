@@ -3,6 +3,7 @@
 Systemd Ubuntu Container Images for testing roles with Molecule and Podman.
 Supported Ubuntu versions:
 
+* `26.04`
 * `24.04`
 * `22.04`
 * `20.04`
@@ -32,4 +33,4 @@ and are automatically rebuilt once a week.
 ## Authors
 
 This project is maintained by [HIFIS](https://www.hifis.net).
-It is built upon https://github.com/geerlingguy/docker-ubuntu2204-ansible.
+It is built upon <https://github.com/geerlingguy/docker-ubuntu2204-ansible>.
